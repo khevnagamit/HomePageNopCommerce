@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -39,60 +40,56 @@ public class HomePageNopCommerce extends Utils {
 
     @Test
     public void CommentInNews(){
-        driver.findElement(By.xpath("//a[@href='/new-online-store-is-open'][@class='read-more']")).click();
+        clickOnElement(By.xpath("//a[@href='/new-online-store-is-open'][@class='read-more']"));
 
-        //Store Title & Comment in variable
-        String Title ="Nice Website";
-        String Comment ="Useful website I will recommend it.";
         //enter comment
-        driver.findElement(By.id("AddNewComment_CommentTitle")).sendKeys(Title);
+        enterText((By.id("AddNewComment_CommentTitle")),loadProp.getProperty("commentTitle"));
 
-        driver.findElement(By.id("AddNewComment_CommentText")).sendKeys(Comment);
+        enterText((By.id("AddNewComment_CommentText")),loadProp.getProperty("Comment"));
 
         //check comment enter successfully
-        driver.findElement(By.xpath("//input[@value=\"New comment\"]")).click();
+        clickOnElement(By.xpath("//input[@value=\"New comment\"]"));
 
         //testing comment added successfully
-        String ExpectedResult = "News comment is successfully added.";
-        String ActualResult= driver.findElement(By.xpath("//div[@class=\"result\"]")).getText();
-        Assert.assertEquals(ActualResult,ExpectedResult);
+        String ActualResult= findGetText(By.xpath("//div[@class=\"result\"]"));
+        Assert.assertEquals(ActualResult,loadProp.getProperty("ExpectedComment"));
 
         //testing Comment is in Comment area
         List<WebElement> commentList = driver.findElements(By.className("comment-text"));
 
         for (WebElement e : commentList) {
-            if(e.getAttribute("outerHTML").contains(Comment)) {
+            if(e.getAttribute("outerHTML").contains(loadProp.getProperty("Comment"))) {
                 //Testing comment is in bottom
                 String actual1 = commentList.get(commentList.size() - 1).getText();
-                softAssert.assertEquals(actual1, Comment);
+                softAssert.assertEquals(actual1,loadProp.getProperty("Comment"));
             }
         }
     }
     @Test
     public void searchButtonFunctionalityInvalidValue() {
-        String WordEnter = "oil";
+
         //enter nike on search button
-        driver.findElement(By.id("small-searchterms")).sendKeys(WordEnter);
-        driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
-        String ExpectedResult = "No products were found that matched your criteria.";
-        String ActualResult = driver.findElement(By.className("no-result")).getText();
-        Assert.assertEquals(ActualResult, ExpectedResult);
+        enterText((By.id("small-searchterms")),loadProp.getProperty("invalidWordEnter"));
+
+        clickOnElement(By.xpath("//input[@type=\"submit\"]"));
+
+        String ActualResult = findGetText(By.className("no-result"));
+        Assert.assertEquals(ActualResult, loadProp.getProperty("invalidExpected"));
 
     }
 
     @Test
     public void searchButtonFunctionalityValidValue() {
-        String WordEnter = "Nike";
             //all product should have word nike
-        driver.findElement(By.id("small-searchterms")).sendKeys(WordEnter);
-        driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
+        driver.findElement(By.id("small-searchterms")).sendKeys(loadProp.getProperty("validWordEnter"));
+        clickOnElement(By.xpath("//input[@type=\"submit\"]"));
             List<WebElement> searchProduct = driver.findElements(By.className("product-item"));
             System.out.println("Total Product available on Home Page " + searchProduct.size());
 
 
             int count = 0;
             for (WebElement e : searchProduct) {
-                if (e.getAttribute("innerHTML").contains(WordEnter)) {
+                if (e.getAttribute("innerHTML").contains(loadProp.getProperty("validWordEnter"))) {
                     count++;
                     softAssert.assertTrue(true);
                 }
@@ -104,34 +101,44 @@ public class HomePageNopCommerce extends Utils {
     public void CompareFunctionality(){
 
         //click on 1st add to compare button
-        driver.findElement(By.xpath("//div[@data-productid=\"4\"]//input[@title=\"Add to compare list\"]")).click();
+        clickOnElement(By.xpath("//div[@data-productid=\"4\"]//input[@title=\"Add to compare list\"]"));
 
-        String ExpectedMSG ="The product has been added to your product comparison";
         //testing 1st added
-        softAssert.assertEquals(driver.findElement(By.xpath("//p[@class=\"content\"]")).getText(),ExpectedMSG);
+        softAssert.assertEquals(findGetText(By.xpath("//p[@class=\"content\"]")),loadProp.getProperty("expectedProductAddedMessage"));
 
         //close span line
-        driver.findElement(By.xpath("//span[@class=\"close\"]")).click();
+        clickOnElement(By.xpath("//span[@class=\"close\"]"));
 
         //click on 2nd add to compare button
-        driver.findElement(By.xpath("//div[@data-productid=\"18\"]//input[@title=\"Add to compare list\"]")).click();
+        clickOnElement(By.xpath("//div[@data-productid=\"18\"]//input[@title=\"Add to compare list\"]"));
 
-        softAssert.assertEquals(driver.findElement(By.xpath("//p[@class=\"content\"]")).getText(),ExpectedMSG);
+        softAssert.assertEquals(findGetText(By.xpath("//p[@class=\"content\"]")),loadProp.getProperty("expectedProductAddedMessage"));
         //close span line
-        driver.findElement(By.xpath("//span[@class=\"close\"]")).click();
+        clickOnElement(By.xpath("//span[@class=\"close\"]"));
 
         //click on compare Product
-        driver.findElement(By.xpath("//div[@class=\"footer-block customer-service\"]//a[@href=\"/compareproducts\"]")).click();
+        clickOnElement(By.xpath("//div[@class=\"footer-block customer-service\"]//a[@href=\"/compareproducts\"]"));
 
         //test in compare product
-       // softAssert.assertTrue(true,"");
+       List<WebElement> compareProduct = driver.findElements(By.xpath("//tr[@class='product-name']//a[@href]"));
+        System.out.println("Product available to compare "+compareProduct.size());
+        List<String> products = new ArrayList<>();
+        for(WebElement e : compareProduct){
+            products.add(e.getText());
+            System.out.println(products);
+        }
+        String Expected[] = {"Apple MacBook Pro 13-inch","HTC One M8 Android L 5.0 Lollipop"};
+        String Actual[] =products.toArray(new String[products.size()]);
+        Assert.assertEquals(Actual,Expected);
 
         //click on clear button
-        driver.findElement(By.className("clear-list")).click();
+        clickOnElement(By.className("clear-list"));
 
         //Test No items
         String expectedMsg ="You have no items to compare.";
-        String actualMsg = driver.findElement(By.className("no-data")).getText();
+        String actualMsg = findGetText(By.className("no-data"));
         softAssert.assertEquals(actualMsg,expectedMsg);
+
+        softAssert.assertAll();
     }
 }

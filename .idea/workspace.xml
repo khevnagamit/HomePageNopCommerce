@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27946772-ac59-43a9-a931-d22a8d0314e4" name="Default Changelist" comment="" />
+    <list default="true" id="27946772-ac59-43a9-a931-d22a8d0314e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resourses/TestDataConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resourses/TestDataConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HomePageNopCommerce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePageNopCommerce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HomePageNopCommerce.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HomePageNopCommerce.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +43,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="296">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/HomePageNopCommerce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+            <state relative-caret-position="248">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Resourses/TestDataConfig.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="119">
+              <caret line="7" column="27" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -84,14 +97,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/BasePage.java" />
-        <option value="$PROJECT_DIR$/src/Resourses/TestDataConfig.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/LoadProp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils.java" />
+        <option value="$PROJECT_DIR$/src/Resourses/TestDataConfig.properties" />
         <option value="$PROJECT_DIR$/src/main/java/HomePageNopCommerce.java" />
       </list>
     </option>
@@ -103,12 +119,13 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
     <option name="height" value="960" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -165,6 +182,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Resourses/BrowserDriver" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -187,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageNopCommerce.CompareFunctionality">
+  <component name="RunManager" selected="TestNG.HomePageNopCommerce">
     <configuration name="HomePageNopCommerce" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerce" />
       <option name="PACKAGE_NAME" value="" />
@@ -223,11 +241,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageNopCommerce.searchButtonFunctionality" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageNopCommerce.searchButtonFunctionalityInvalidValue" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="NopCommerce" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HomePageNopCommerce" />
-      <option name="METHOD_NAME" value="searchButtonFunctionality" />
+      <option name="METHOD_NAME" value="searchButtonFunctionalityInvalidValue" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -249,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HomePageNopCommerce.CompareFunctionality" />
-        <item itemvalue="TestNG.HomePageNopCommerce.CommentInNews" />
         <item itemvalue="TestNG.HomePageNopCommerce" />
+        <item itemvalue="TestNG.HomePageNopCommerce.CompareFunctionality" />
         <item itemvalue="TestNG.HomePageNopCommerce.searchButtonFunctionalityValidValue" />
-        <item itemvalue="TestNG.HomePageNopCommerce.searchButtonFunctionality" />
+        <item itemvalue="TestNG.HomePageNopCommerce.CommentInNews" />
+        <item itemvalue="TestNG.HomePageNopCommerce.searchButtonFunctionalityInvalidValue" />
       </list>
     </recent_temporary>
   </component>
@@ -271,35 +289,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HomePageNopCommerce_searchButtonFunctionality - 2019.10.01 at 00h 56m 50s.xml">
-      <configuration name="HomePageNopCommerce.searchButtonFunctionality" configurationId="TestNG" />
+    <history-entry file="HomePageNopCommerce_searchButtonFunctionalityInvalidValue - 2019.10.02 at 22h 40m 36s.xml">
+      <configuration name="HomePageNopCommerce.searchButtonFunctionalityInvalidValue" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageNopCommerce_searchButtonFunctionalityValidValue - 2019.10.01 at 01h 02m 47s.xml">
+    <history-entry file="HomePageNopCommerce_searchButtonFunctionalityInvalidValue - 2019.10.02 at 22h 41m 25s.xml">
+      <configuration name="HomePageNopCommerce.searchButtonFunctionalityInvalidValue" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageNopCommerce_searchButtonFunctionalityInvalidValue - 2019.10.02 at 22h 42m 27s.xml">
+      <configuration name="HomePageNopCommerce.searchButtonFunctionalityInvalidValue" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageNopCommerce_CommentInNews - 2019.10.02 at 22h 43m 40s.xml">
+      <configuration name="HomePageNopCommerce.CommentInNews" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HomePageNopCommerce_searchButtonFunctionalityValidValue - 2019.10.02 at 22h 46m 26s.xml">
       <configuration name="HomePageNopCommerce.searchButtonFunctionalityValidValue" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageNopCommerce_CompareFunctionality - 2019.10.01 at 02h 17m 16s.xml">
+    <history-entry file="HomePageNopCommerce_CompareFunctionality - 2019.10.02 at 23h 20m 19s.xml">
       <configuration name="HomePageNopCommerce.CompareFunctionality" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageNopCommerce_searchButtonFunctionalityValidValue - 2019.10.02 at 00h 38m 32s.xml">
-      <configuration name="HomePageNopCommerce.searchButtonFunctionalityValidValue" configurationId="TestNG" />
+    <history-entry file="HomePageNopCommerce_CompareFunctionality - 2019.10.02 at 23h 22m 06s.xml">
+      <configuration name="HomePageNopCommerce.CompareFunctionality" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageNopCommerce - 2019.10.02 at 00h 46m 26s.xml">
-      <configuration name="HomePageNopCommerce" configurationId="TestNG" />
+    <history-entry file="HomePageNopCommerce_CompareFunctionality - 2019.10.02 at 23h 25m 00s.xml">
+      <configuration name="HomePageNopCommerce.CompareFunctionality" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageNopCommerce_CommentInNews - 2019.10.02 at 10h 53m 47s.xml">
-      <configuration name="HomePageNopCommerce.CommentInNews" configurationId="TestNG" />
+    <history-entry file="HomePageNopCommerce_CompareFunctionality - 2019.10.02 at 23h 28m 34s.xml">
+      <configuration name="HomePageNopCommerce.CompareFunctionality" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HomePageNopCommerce_CommentInNews - 2019.10.02 at 10h 58m 13s.xml">
-      <configuration name="HomePageNopCommerce.CommentInNews" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageNopCommerce_CommentInNews - 2019.10.02 at 11h 00m 05s.xml">
-      <configuration name="HomePageNopCommerce.CommentInNews" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageNopCommerce_CommentInNews - 2019.10.02 at 11h 14m 12s.xml">
-      <configuration name="HomePageNopCommerce.CommentInNews" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HomePageNopCommerce_CommentInNews - 2019.10.02 at 11h 16m 45s.xml">
-      <configuration name="HomePageNopCommerce.CommentInNews" configurationId="TestNG" />
+    <history-entry file="HomePageNopCommerce_CompareFunctionality - 2019.10.02 at 23h 36m 14s.xml">
+      <configuration name="HomePageNopCommerce.CompareFunctionality" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -351,15 +369,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resourses/TestDataConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="296">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -373,10 +390,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Resourses/TestDataConfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HomePageNopCommerce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+        <state relative-caret-position="248">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
